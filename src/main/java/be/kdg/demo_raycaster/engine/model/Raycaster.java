@@ -17,6 +17,8 @@ public class Raycaster {
         double sideDistX, sideDistY;
         int stepX, stepY;
 
+
+    // Step 1: check the directon of the vector (on the X axis, is our vector going towards infinity or towards zero?)
         if (rayDirX < 0) {
             stepX = -1;
             sideDistX = (px - mapX) * deltaDistX;
@@ -24,7 +26,7 @@ public class Raycaster {
             stepX = 1;
             sideDistX = (mapX + 1.0 - px) * deltaDistX;
         }
-
+    // Step 2: check the directop of the vector (on the Y axis, is our vector going up or down? towards infinity or towards zero?)
         if (rayDirY < 0) {
             stepY = -1;
             sideDistY = (py - mapY) * deltaDistY;
